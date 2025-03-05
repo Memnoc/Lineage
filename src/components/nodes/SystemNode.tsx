@@ -1,18 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Database, ChevronDown, ChevronUp, Workflow } from "lucide-react";
-import { SystemType, System } from "../../types";
 import { ActionItem } from "./ActionItem";
 import { DataPoints } from "./DataPoints";
 import { systemColors } from "../../data/systems/systemsColors";
-
-// FIX: move this
-export interface SystemNodeProps {
-  system: System;
-  type: SystemType;
-  isExpanded: boolean;
-  isActive: boolean;
-  onClick: () => void;
-}
+import { SystemNodeProps } from "../../data/systems/systemNodeProps";
 
 // WARN: isActive may prove useful in the future, leave it here
 export const SystemNode: React.FC<SystemNodeProps> = ({
